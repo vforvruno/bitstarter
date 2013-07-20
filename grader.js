@@ -73,8 +73,8 @@ if(require.main == module) {
             if(data instanceof Error) {
                 console.log("Error");
             } else {
-                fs.writeFileSync("url.html", data);  
-                var checkJson = checkHtmlFile("url.html", program.checks);
+                fs.writeFileSync("/tmp/url.html", data);  
+                var checkJson = checkHtmlFile("/tmp/url.html", program.checks);
                 var outJson = JSON.stringify(checkJson, null, 4);
                 console.log(outJson);
             }
